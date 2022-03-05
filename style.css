@@ -1,0 +1,203 @@
+body {
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    background-color: #f5fff5;
+}
+
+:root{
+    --cell_size: 0;
+    --table_size: 0;
+    --main_size: 0;
+    --margin_l: 0;
+}
+
+#logo{
+    width: 8%;
+    position: absolute;
+    top: 1%;
+    left: 1%;
+}
+#main {
+    width: var(--main_size);
+    height: var(--main_size);
+    margin-left: var(--margin_l);
+    margin-top: 5%;
+    background: rgb(0,228,255);
+    background: linear-gradient(60deg, rgba(0,228,255,1) 0%, rgba(0,255,85,1) 100%);
+    border: 0.3vw solid;
+    padding: 0;
+}
+
+table {
+    width: var(--table_size);
+    height: var(--table_size);
+    float: left;
+    border: 0.2vw solid;
+}
+
+tr{
+    width: 100%;
+    height: 11%;
+    text-align: center;
+}
+
+td {
+    width: var(--cell_size);
+    height: var(--cell_size);
+    
+}
+
+input{
+    width: var(--cell_size);
+    height: var(--cell_size);
+    font-size: 2vw;
+    text-align: center;
+    background: transparent;
+}
+
+
+#nav {
+    width: 20%;
+    position: absolute;
+    left: 80%;
+    top: 15%;
+}
+
+
+#lvl{
+    width: 100%;
+    text-align: center;
+}
+
+#lvl button{
+    box-sizing: border-box;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: transparent;
+    border: 0.18vw solid #e74c3c;
+    border-radius: 0.6em;
+    cursor: pointer;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-self: center;
+    -ms-flex-item-align: center;
+    align-self: center;
+    font-size: 0.8vw;
+    line-height: 1;
+    padding: 1.2em 2.8em;
+    text-decoration: none;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    border-color: #f1c40f;
+    color: #f1c40f;
+    background-image: -webkit-linear-gradient(45deg, #f1c40f 50%, transparent 50%);
+    background-image: linear-gradient(45deg, #f1c40f 50%, transparent 50%);
+    background-position: 100%;
+    background-size: 400%;
+    -webkit-transition: background 300ms ease-in-out;
+    transition: background 300ms ease-in-out;
+}
+
+#lvl button:hover, #lvl button:focus {
+    color: #fff;
+    outline: 0;
+    background-position: 0;
+}
+
+
+
+
+#b_check, #b_solution{
+    background: none;
+    border: none;
+    cursor: pointer;
+    line-height: 1.5;
+    font-size: 1vw;
+    font-weight: bold;
+    padding: 1em 2em;
+    letter-spacing: 0.05rem;
+    margin-top: 15%;
+}
+#b_check:focus, #b_solution:focus{
+    outline: 2px dotted #55d7dc;
+}
+
+
+
+.draw-border {
+    box-shadow: inset 0 0 0 4px #00b7ff;
+    color: #00b7ff;
+    transition: color 0.25s 0.0833333333s;
+    position: relative;
+  }
+  .draw-border::before, .draw-border::after {
+    border: 0 solid transparent;
+    box-sizing: border-box;
+    content: "";
+    pointer-events: none;
+    position: absolute;
+    width: 0;
+    height: 0;
+    bottom: 0;
+    right: 0;
+  }
+  .draw-border::before {
+    border-bottom-width: 4px;
+    border-left-width: 4px;
+  }
+  .draw-border::after {
+    border-top-width: 4px;
+    border-right-width: 4px;
+  }
+  .draw-border:hover {
+    color: #ffc400;
+  }
+  .draw-border:hover::before, .draw-border:hover::after {
+    border-color: #ffc400;
+    transition: border-color 0s, width 0.25s, height 0.25s;
+    width: 100%;
+    height: 100%;
+  }
+  .draw-border:hover::before {
+    transition-delay: 0s, 0s, 0.25s;
+  }
+  .draw-border:hover::after {
+    transition-delay: 0s, 0.25s, 0s;
+  }
+  
+  
+
+
+
+
+
+@media only all and (max-width: 450px){
+    #main{
+        margin-top: 20%;
+    }
+
+    #logo {
+        width: 10%;
+        left: 45%;
+    }
+
+    #nav{
+        position: static;
+        margin-top: 10%;
+        margin-left: 40%;
+    }
+
+    #lvl button{
+        font-size: 1.8vw;
+    }
+
+    #b_check, #b_solution{
+        font-size: 1.8vw;
+    }
+};
